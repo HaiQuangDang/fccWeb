@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+h2{
+    text-align: center;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 2px 4px 3px #1560bd;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+span{
+    display: block;
+    letter-spacing: 2px;
+}
+/*** Header */
+
+.header{
+    background-image: url(https://images.squarespace-cdn.com/content/v1/5f68e58b05989f21a1e59b8d/1603121344704-2229RSP5N82I5Z51VEIR/Jim+Croce+Hero+Image+1-+jimcroce.com.jpg?format=2500w);
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+#title{
+    background-color: rgba(75, 30, 27, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+#title h1{
+    text-align: center;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 2px 4px 3px #1560bd;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+#title div{
+    color: white;
+    display: flex;
+    align-items: center;
+}
+#title div p{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-left: 5px solid rgb(26, 96, 188);
+}
+/* info */
+#tribute-info{
+    background-image: url(https://image.freepik.com/free-photo/vintage-grunge-paper-background_1048-10911.jpg);
+    background-position: center;
+    background-size: cover;
+    height: fit-content;
+    position: relative;
+}
+#img-div{
+    padding: 0  60px;
+}
+#image{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+#img-caption{
+    color: #4b1411;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 80%;
+    display: block;
+}
+.life p, .music p{
+    text-align: left;
+    display: block;
+    margin: 0 auto;
+    color: #4b1411;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+#album{
+    display: grid;
+    background-color: white;
+}
+.album__item img{
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+.more{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding-bottom: 100px;
+}
+.more a{
+    text-decoration: none;
+}

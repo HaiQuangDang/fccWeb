@@ -1,0 +1,273 @@
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    h2{
+        padding: 50px;
+        font-size: 60px;
+    }
+    span{
+        font-size: 14px;
+    }
+    /* headers */
+    .header{
+        height: 90vh;
+    }
+    #title h1{
+        padding: 50px;
+        font-size: 70px;
+    }
+    #title div{
+        width: 50%;
+        margin-left: auto;
+    }
+    #title div p{
+        font-size: 30px;
+        padding: 20px;
+        line-height: 45px;
+    }
+    /* info */
+    #img-caption{
+        margin: 5px auto 30px;
+        font-size: 22px;
+    }
+    .life p, .music p{
+        width: 80%;
+        font-size: 19px;
+        line-height: 30px;
+    }
+    .life p::first-letter, .music p::first-letter{
+        font-size: 40px;
+    }
+    #album{
+        width: 80%;
+        margin: 30px auto;
+        gap: 30px; 
+        padding: 30px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .more{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .more a{
+        font-size: 22px;
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    h2{
+        padding: 50px;
+        font-size: 54px;
+    }
+    span{
+        font-size: 14px;
+    }
+    /* headers */
+    .header{
+        height: 90vh;
+    }
+    #title h1{
+        padding: 50px;
+        font-size: 65px;
+    }
+    #title div{
+        width: 60%;
+        margin-left: auto;
+    }
+    #title div p{
+        font-size: 24px;
+        padding: 14px;
+        line-height: 40px;
+    }
+     /* info */
+    #img-caption{
+        margin: 5px auto 30px;
+        font-size: 18px;
+    }
+    .life p, .music p{
+        width: 85%;
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .life p::first-letter, .music p::first-letter{
+        font-size: 34px;
+    }
+    #album{
+        width: 90%;
+        margin: 30px auto;
+        gap: 30px;
+        padding: 30px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .more{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .more a{
+        font-size: 22px;
+    }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    h2{
+        padding: 40px;
+        font-size: 50px;
+    }
+    span{
+        font-size: 14px;
+    }
+    /* headers */
+    .header{
+        height: 70vh;
+    }
+    #title h1{
+        padding: 40px;
+        font-size: 60px;
+    }
+    #title div{
+        width: 60%;
+        margin-left: auto;
+    }
+    #title div p{
+        font-size: 20px;
+        padding: 14px;
+        line-height: 36px;
+    }
+     /* info */
+    #img-caption{
+        margin: 5px auto 30px;
+        font-size: 16px;
+    }
+    .life p, .music p{
+        width: 85%;
+        font-size: 17px;
+        line-height: 24px;
+    }
+    .life p::first-letter, .music p::first-letter{
+        font-size: 30px;
+    }
+    #album{
+        width: 80%;
+        margin: 30px auto;
+        gap: 24px;
+        padding: 24px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .more{
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .more a{
+        font-size: 20px;
+    }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 767px ) {
+    h2{
+        padding: 34px;
+        font-size: 44px;
+    }
+    span{
+        font-size: 12px;
+    }
+    /* headers */
+    .header{
+        height: 50vh;
+    }
+    #title h1{
+        padding: 30px;
+        font-size: 54px;
+    }
+    #title div{
+        width: 80%;
+        margin: 0 auto;
+    }
+    #title div p{
+        font-size: 20px;
+        padding: 12px;
+        line-height: 30px;
+    }
+      /* info */
+    #img-caption{
+        margin: 5px auto 20px;
+        font-size: 16px;
+    }
+    .life p, .music p{
+        width: 85%;
+        font-size: 17px;
+        line-height: 24px;
+    }
+    .life p::first-letter, .music p::first-letter{
+        font-size: 24px;
+    }
+    #album{
+        width: 80%;
+        margin: 30px auto;
+        gap: 24px;
+        padding: 24px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .more{
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .more a{
+        font-size: 18px;
+    }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    h2{
+        padding: 28px;
+        font-size: 30px;
+    }
+    span{
+        font-size: 10px;
+    }
+    /* header */
+    .header{
+        height: 40vh;
+    }
+    #title h1{
+        padding: 20px;
+        font-size: 36px;
+    }
+    #title div{
+        width: 80%;
+        margin: 0 auto;
+    }
+    #title div p{
+        font-size: 14px;
+        padding: 6px;
+        line-height: 20px;
+    }
+    /* info */
+    #img-caption{
+        margin: 5px auto 15px;
+        font-size: 14px;
+    }
+    .life p, .music p{
+        width: 90%;
+        font-size: 15px;
+        line-height: 24px;
+    }
+    .life p::first-letter, .music p::first-letter{
+        font-size: 20px;
+    }
+    #album{
+        width: 85%;
+        margin: 30px auto;
+        gap: 20px 0;
+        padding: 20px;
+        grid-template-columns: 1fr;
+    }
+    .more{
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .more a{
+        font-size: 17px;
+    }
+    #img-div{
+        padding: 0  40px;
+    }
+}
