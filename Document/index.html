@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation Page</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body,
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* navbar */
+        .navbar {
+            min-width: 310px;
+            max-width: 100%;
+            background-color: #f7f7f7;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+        }
+
+        .navbar header {
+            font-size: 1.8rem;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .nav-link {
+            display: block;
+            font-size: 1.2rem;
+            padding: 6px 0 6px 20px;
+            color: black;
+        }
+
+        .nav-link:hover {
+            background-color: #cccccc;
+        }
+
+        /* main */
+        #main-doc {
+            padding: 20px;
+        }
+
+        .main-section header {
+            font-size: 1.8rem;
+        }
+
+        .main-section article {
+            padding: 18px;
+            color: #4d4e53;
+            letter-spacing: 1px;
+        }
+
+        .main-section article p {
+            line-height: 25px;
+            margin: 8px 0;
+        }
+
+        .main-section article code {
+            padding: 15px;
+            margin: 5px 0;
+            background-color: #f7f7f7;
+            color: mediumblue;
+            display: block;
+            border-radius: 5px;
+            overflow: auto;
+        }
+
+        .main-section article code span {
+            color: #333;
+        }
+
+        .main-section article .note {
+            padding: 10px;
+            margin: 8px 0;
+            background-color: #ffffcc;
+            color: #333;
+            display: block;
+            border-radius: 5px;
+        }
+
+        .main-section article .tag {
+            background-color: #f7f7f7;
+            color: blue;
+        }
+
+        .main-section article h2 {
+            font-size: 1.2rem;
+            font-weight: normal;
+            color: black;
+            margin: 8px 0;
+        }
+
+        .css__color {
+            height: 50px;
+            width: 100px;
+            margin: 8px;
+            text-align: center;
+            line-height: 50px;
+            color: white;
+            display: inline-block;
+        }
+
+        @media only screen and (min-width: 815px) {
+            .navbar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 100%;
+                overflow-y: auto;
+            }
+
+            #main-doc {
+                position: absolute;
+                left: 310px;
+            }
+        }
+
+        @media only screen and (max-width: 814px) {
+            .navbar {
+                height: 200px;
+                overflow-y: auto;
+                border-bottom: 2px solid #000;
+            }
+
+            html {
+                font-size: 14px;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            html {
+                font-size: 12px;
+            }
+
+            #main-doc {
+                padding: 5px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mydoc">
+        <nav id="navbar" class="navbar">
+            <header>Basic HTML & CSS</header>
+            <ul>
+                <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+                <li><a href="#What_is_HTML?" class="nav-link">What is HTML?</a></li>
+                <li><a href="#What_is_an_HTML_Element?" class="nav-link">What is an HTML Element?</a></li>
+                <li><a href="#HTML_Attributes" class="nav-link">HTML Attributes</a></li>
+                <li><a href="#HTML_Forms" class="nav-link">HTML Forms</a></li>
+                <li><a href="#What_is_CSS?" class="nav-link">What is CSS?</a></li>
+                <li><a href="#How_To_Add_CSS" class="nav-link">How To Add CSS</a></li>
+                <li><a href="#CSS_Colors" class="nav-link">CSS Colors</a></li>
+                <li><a href="#Reference" class="nav-link">Reference</a></li>
+            </ul>
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="Introduction">
+                <header>Introduction</header>
+                <article>
+                    <p>
+                        In this documentation, you'll learn the basics of HTML and CSS, these languages that developers
+                        use to build webpages: HTML (Hypertext Markup Language) for content, and CSS (Cascading Style
+                        Sheets) for design.
+                    </p>
+                </article>
+            </section>
+            <section class="main-section" id="What_is_HTML?">
+                <header>What is HTML?</header>
+                <article>
+                    <p>
+                        HTML is a markup language that uses a special syntax or notation to describe the structure of a
+                        webpage to the browser. HTML elements usually have opening and closing tags that surround and
+                        give meaning to content. For example, different elements can describe text as a heading,
+                        paragraph, or list item.
+                    </p>
+                    <p>A Simple HTML Document:</p>
+                    <code>
+                            &lt;!DOCTYPE html&gt; <br>
+                            &lt;html&gt;  <br>
+                            &lt;head&gt;  <br>
+                            &lt;title&gt;<span>Page Title</span>&lt;/title&gt;  <br>
+                            &lt;/head&gt;  <br>
+                            &lt;body&gt;  <br>
+                                <br>
+                            &lt;h1&gt;<span> My First Heading </span>&lt;/h1&gt;  <br>
+                            &lt;p&gt;<span> My first paragraph</span> &lt;/p&gt;  <br>
+                                <br>
+                            &lt;/body&gt;  <br>
+                            &lt;/html&gt;  <br>
+                    </code>
+                    <p>
+                        All HTML documents must start with a document type declaration: <span class="tag">&lt;!DOCTYPE
+                            html&gt;</span>
+                    </p>
+                    <p>The HTML document itself begins with <span class="tag">&lt;html&gt;</span> and ends with <span
+                            class="tag">&lt;/html&gt;</span>.</p>
+                    <p>
+                        The visible part of the HTML document is between <span class="tag">&lt;body&gt;</span> and <span
+                            class="tag">&lt;/body&gt;</span>.
+                    </p>
+                </article>
+            </section>
+            <section class="main-section" id="What_is_an_HTML_Element?">
+                <header>What is an HTML Element?</header>
+                <article>
+                    <p>
+                        An HTML element is defined by a start tag, some content, and an end tag:
+                    </p>
+                    <code>&lt;tagname&gt; <span>Content goes here...</span> &lt;/tagname&gt;</code>
+                    <h2>HTML Headings:</h2>
+                    <p>HTML headings are defined with the <span class="tag">&lt;h1&gt;</span> to <span
+                            class="tag">&lt;h6&gt;</span> tags.</p>
+                    <p>
+                        <span class="tag">&lt;h1&gt;</span> defines the most important heading. <span
+                            class="tag">&lt;h6&gt;</span> defines the least important heading:
+                    </p>
+                    <code>
+                        &lt;h1&gt; <span>This is heading 1</span> &lt;/h1&gt; <br>
+                        &lt;h2&gt; <span>This is heading 2</span> &lt;/h2&gt; <br>
+                        &lt;h3&gt; <span>This is heading 3</span> &lt;/h3&gt; <br>
+                    </code>
+
+                    <h2>HTML Paragraphs:</h2>
+                    <p>HTML paragraphs are defined with the <span class="tag">&lt;p&gt;</span> tag: <span
+                            class="tag">&lt;/p&gt;</span>
+                        <code>
+                        &lt;p&gt; <span>This is a paragraph.</span> &lt;/p&gt; <br>
+                        &lt;p&gt; <span>This is another paragraph.</span> &lt;/p&gt; <br>
+                    </code>
+                    <h2>HTML Links:</h2>
+                    <p>HTML links are defined with the <span class="tag">&lt;a&gt;</span> tag:</p>
+                    <code>
+                        &lt;a href="https://www.w3schools.com"&gt;<span>This is a link</span> &lt;/a&gt;
+                    </code>
+                    <h2>HTML Images</h2>
+                    <p>
+                        HTML images are defined with the <span class="tag">&lt;img&gt;</span> tag.
+                    </p>
+                    <p>
+                        The source file <span class="tag">src</span>, alternative text <span class="tag">alt</span>,
+                        <span class="tag">width</span>, and <span class="tag">height</span> are provided as attributes:
+                    </p>
+                    <code>
+                        &lt;img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142"&gt;
+                    </code>
+                    <p class="note">
+                        <strong>Note:</strong> Some HTML elements have no content (like the element). These elements are
+                        called empty elements. Empty elements do not have an end tag!
+                    </p>
+
+                </article>
+            </section>
+            <section class="main-section" id="HTML_Attributes">
+                <header>HTML Attributes</header>
+                <article>
+                    <ul>
+                        <li>All HTML elements can have <strong>attributes</strong></li>
+                        <li>Attributes provide <strong>additional information</strong> about elements</li>
+                        <li>Attributes are always specified in <strong>the start tag</strong></li>
+                        <li>Attributes usually come in name/value pairs like: <strong>name="value"</strong></li>
+                    </ul>
+                    <h2>The href Attribute:</h2>
+                    <p>
+                        The <span class="tag">&lt;a&gt;</span> tag defines a hyperlink. The <span
+                            class="tag">href</span> attribute specifies the URL of the page the link goes to:
+                    </p>
+                    <code>
+                    &lt;a href="https://www.w3schools.com"&gt; <span>Visit W3Schools</span> &lt;/a&gt;
+                   </code>
+                    <h2>The src Attribute:</h2>
+                    <p>
+                        The <span class="tag">&lt;img&gt;</span> tag is used to embed an image in an HTML page. The
+                        <span class="tag">src</span> attribute specifies the path to the image to be displayed:
+                    </p>
+                    <code>
+                    &lt;img src="img_girl.jpg"&gt;
+                   </code>
+                    <h2>The width and height Attributes:</h2>
+                    <p>
+                        The <span class="tag">&lt;img&gt;</span> tag should also contain the <span
+                            class="tag">width</span> and <span class="tag">height</span> attributes, which specifies the
+                        width and height of the image (in pixels):
+                    </p>
+                    <h2>The alt Attribute:</h2>
+                    <p>
+                        The required <span class="tag">alt</span> attribute for the <span class="tag">&lt;img&gt;</span>
+                        tag specifies an alternate text for an image, if the image for some reason cannot be displayed.
+                        This can be due to slow connection, or an error in the <span class="tag">src</span> attribute,
+                        or if the user uses a screen reader.
+                    </p>
+                    <code>
+                    &lt;img src="img_girl.jpg" alt="Girl with a jacket"&gt;
+                   </code>
+
+                </article>
+            </section>
+            <section class="main-section" id="HTML_Forms">
+                <header>HTML Forms</header>
+                <article>
+                    <p>An HTML form is used to collect user input. The user input is most often sent to a server for
+                        processing.</p>
+                    <h2>The <span class="tag">&lt;form&gt;</span> Element</h2>
+                    <code>
+                            &lt;form&gt; <br>
+                               <span>
+                                .   <br>
+                                form elements <br>
+                                .   <br>
+                               </span>
+                            &lt;/form&gt;
+                    </code>
+                    <h2>The <span class="tag">&lt;input&gt;</span> Element</h2>
+                    <p>The HTML <span class="tag">&lt;input&gt;</span> element is the most used form element.</p>
+                    <p>An <span class="tag">&lt;input&gt;</span> element can be displayed in many ways, depending on the
+                        type attribute.</p>
+
+                    <code>
+                        &lt;input type="text"&gt;	    <span>Displays a single-line text input field</span>  <br>
+                        &lt;input type="radio"&gt;	    <span>Displays a radio button (for selecting one of many choices)</span>  <br>
+                        &lt;input type="checkbox"&gt;	<span>Displays a checkbox (for selecting zero or more of many choices)</span> <br>
+                        &lt;input type="submit"&gt;	    <span>Displays a submit button (for submitting the form)</span> <br>
+                        &lt;input type="button"&gt;	    <span>Displays a clickable button</span> <br>
+                    </code>
+                </article>
+            </section>
+            <section class="main-section" id="What_is_CSS?">
+                <header>What is CSS?</header>
+                <article>
+                    <p>
+                        CSS, or Cascading Style Sheets, tell the browser how to display the text and other content that
+                        you write in HTML. With CSS, you can control the color, font, size, spacing, and many other
+                        aspects of HTML elements.
+                    </p>
+                </article>
+            </section>
+            </section>
+            <section class="main-section" id="How_To_Add_CSS">
+                <header>How To Add CSS</header>
+                <article>
+                    <h2>Three Ways to Insert CSS:</h2>
+                    <ul>
+                        <li>External CSS</li>
+                        <li>Internal CSS</li>
+                        <li>Inline CSS</li>
+                    </ul>
+                    <h2>External CSS</h2>
+                    <p>With an external style sheet, you can change the look of an entire website by changing just one
+                        file!
+
+                        Each HTML page must include a reference to the external style sheet file inside the
+                        <link> element, inside the head section.
+                    </p>
+                    <p>External styles are defined within the <span class="tag">&lt;link&gt;</span> element, inside the
+                        <span class="tag">&lt;head&gt;</span> section of an HTML page:
+                    </p>
+                    <code>
+                        &lt;!DOCTYPE html&gt; <br>
+                        &lt;html&gt; <br>
+                        &lt;head&gt; <br>
+                        &lt;link rel="stylesheet" href="mystyle.css"&gt; <br>
+                        &lt;/head&gt; <br>
+                        &lt;body&gt; <br>
+                        <br>
+                        &lt;h1&gt; <span>This is a heading</span> &lt;/h1&gt; <br>
+                        &lt;p&gt; <span>This is a paragraph.</span> &lt;/p&gt; <br>
+                        <br>
+                        &lt;/body&gt; <br>
+                        &lt;/html&gt;
+                    </code>
+                    <h2>Internal CSS</h2>
+                    <p>
+                        An internal style sheet may be used if one single HTML page has a unique style.
+                        The internal style is defined inside the <span class="tag"> &lt;style&gt;</span> element, inside
+                        the head section.
+                    </p>
+                    <p>
+                        Internal styles are defined within the <sapn class="tag">&lt;style&gt;</sapn> element, inside
+                        the <sapn class="tag">&lt;head&gt;</sapn> section of an HTML page:
+                    </p>
+                    <code>
+                        &lt;!DOCTYPE html&gt; <br>
+                        &lt;html&gt; <br>
+                        &lt;head&gt; <br>
+                        &lt;style&gt; <br>
+                            <span>
+                                body { <br>
+                                    background-color: linen; <br>
+                                    } <br>
+            
+                                    h1 { <br>
+                                    color: maroon; <br>
+                                    margin-left: 40px; <br>
+                                    } <br>
+                            </span>
+                        &lt;/style&gt; <br>
+                        &lt;/head&gt; <br>
+                        &lt;body&gt; <br>
+                        <br>
+                        &lt;h1&gt; <span>This is a heading</span> &lt;/h1&gt; <br>
+                        &lt;p&gt; <span>This is a paragraph.</span> &lt;/p&gt; <br>
+                        <br>
+                        &lt;/body&gt; <br>
+                        &lt;/html&gt; <br>
+                    </code>
+                    <h2>Inline CSS</h2>
+                    <p>An inline style may be used to apply a unique style for a single element.
+                        To use inline styles, add the style attribute to the relevant element. The style attribute can
+                        contain any CSS property. </p>
+                    <p>
+                        Inline styles are defined within the "style" attribute of the relevant element:
+                    </p>
+                    <code>
+                        &lt;!DOCTYPE html&gt; <br>
+                        &lt;html&gt; <br>
+                        &lt;body&gt; <br>
+                        <br>
+                        &lt;h1 style="color:blue;text-align:center;"&gt; <span>This is a heading</span> &lt;/h1&gt; <br>
+                        &lt;p style="color:red;"&gt; <span>This is a paragraph.</span> &lt;/p&gt; <br>
+                        <br>
+                        &lt;/body&gt; <br>
+                        &lt;/html&gt; <br>
+                    </code>
+                </article>
+            </section>
+            </section>
+            <section class="main-section" id="CSS_Colors">
+                <header>CSS Colors</header>
+                <article>
+                    <p>Colors are specified using predefined color names.</p>
+                    <h2>CSS Color Names</h2>
+                    <p>In CSS, a color can be specified by using a predefined color name:</p>
+                    <div class="css__color" style="background-color: tomato;">Tomato</div>
+                    <div class="css__color" style="background-color: orange;">Orange</div>
+                    <div class="css__color" style="background-color: violet;">Violet</div>
+                    <h2>CSS Background Color</h2>
+                    <p>You can set the background color for HTML elements:</p>
+                    <code>&lt;h1 style="background-color:DodgerBlue;"&gt;<span>Hello World</span>&lt;/h1&gt;</code>
+                    <p>Result:</p>
+                    <h1 style="background-color:DodgerBlue;">Hello World</h1>
+                    <h2>CSS Text Color</h2>
+                    <p>You can set the color of text:</p>
+                    <code>&lt;h1 style="color:Tomato;"&gt; <span>Hello World</span> &lt;/h1&gt;</code>
+                    <p>Result:</p>
+                    <h1 style="color:Tomato;">Hello World</h1>
+                </article>
+            </section>
+            <section class="main-section" id="Reference">
+                <header>Reference</header>
+                <article>
+                    <p>All the documentation in this page is taken from <a
+                            href="https://www.w3schools.com/html/default.asp" target="_blank">w3schools</a></p>
+                </article>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
