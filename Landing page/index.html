@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page - Fresh Milk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- gg font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header id="header">
+        <div href="#" id="logo">
+            <img id="header-img" src="https://i.pinimg.com/564x/1e/32/b4/1e32b4f09fd87c4832b9dd3251a85a0b.jpg" alt="">
+            <h1><span>FRESH</span>MILK</h1>
+            <a href="javascript:void(0);" id="bar" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        
+        <nav id="nav-bar" class="nav-bar">
+            <ul>
+                <li><a class="nav-link" href="#main">HOME</a></li>
+                <li><a class="nav-link" href="#about">ABOUT</a></li>
+                <li><a class="nav-link" href="#gallery">GALLERY</a></li>
+                <li><a class="nav-link" href="#news">NEWS</a></li>
+                <li><a class="nav-link" href="#subscribe">SUBSCRIBE</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="main">
+        <!-- about -->
+        
+        <section id="about">
+            <h2 >ABOUT</h2>
+            <div class="about__content">
+               <div class="about__img">
+                    <img src="https://www.kanegrade.com/wp-content/uploads/2020/06/kanegrade-dairy-products-ingredients.jpg"
+                    alt="">
+               </div>
+                <div class="about__text">
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto deleniti iure animi, minima
+                        quo dolor corrupti, beatae earum aspernatur distinctio reiciendis. Amet nisi debitis,
+                        consequuntur et perferendis odio quisquam sunt optio voluptas ipsum quae, inventore totam nam
+                        aliquid porro aspernatur sequi magnam voluptates impedit provident magni cupiditate. Itaque, non
+                        eaque.</p>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem explicabo dolor repellat
+                        architecto, molestiae maiores.</p>
+                    <br>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </section>
+        <!-- gallery -->
+        <section id="gallery">
+            <h2>OUR GALLERY</h2>
+            <div class="gallery__content">
+                <figure class="gallery__item">
+                    <img src="https://images.pexels.com/photos/5693395/pexels-photo-5693395.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                        alt="">
+                    <figcaption class="gallery__text">
+                        <h1>OUR GALLERY</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod delectus consectetur, commodi
+                            dolor iusto doloremque.</p>
+                    </figcaption>
+                </figure>
+                <figure class="gallery__item">
+                    <img src="https://images.pexels.com/photos/1436130/pexels-photo-1436130.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                        alt="">
+                    <figcaption class="gallery__text">
+                        <h1>OUR GALLERY</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod delectus consectetur, commodi
+                            dolor iusto doloremque.</p>
+                    </figcaption>
+                </figure>
+                <figure class="gallery__item">
+                    <img src="https://images.pexels.com/photos/289368/pexels-photo-289368.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                        alt="">
+                    <figcaption class="gallery__text">
+                        <h1>OUR GALLERY</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod delectus consectetur, commodi
+                            dolor iusto doloremque.</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+        <!-- news -->
+        <section id="news">
+            <h2>NEWS</h2>
+            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/xmNzUEmFZMg" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </section>
+        <!-- subscribe -->
+        <section id="subscribe">
+            <h2>SUBSCRIBE</h2>
+            <form action="https://www.freecodecamp.org/email-submit" id="form" method="post">
+                <input id="email" type="email" placeholder="Enter your email" name="email" required>
+                <button id="submit" type="submit">Subscribe</button>
+            </form>
+        </section>
+    </div>
+    <!-- footer -->
+    <footer>
+        <div class="footer__content">
+            <a href="">Privacy</a>
+            <a href="">Terms</a>
+            <a href="">Contact</a>
+            <p>Copyright 2022, FreshMilk, By danghaiquang</p>
+        </div>
+    </footer>
+
+
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("nav-bar");
+            if (x.className === "nav-bar") {
+                x.className += " responsive";
+            } else {
+                x.className = "nav-bar";
+            }
+        }
+    </script>
+</body>
+
+</html>
