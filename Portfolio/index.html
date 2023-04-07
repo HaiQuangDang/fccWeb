@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCC: Personal Portfolio Webpage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        section {
+            padding: 5rem 1rem;
+        }
+
+        /* START HEADER */
+        header {
+            background-color: #392F2F;
+            padding: 0 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        header>h1 {
+            color: #E3B587;
+        }
+
+        #navbar>ul {
+            display: flex;
+        }
+
+        #navbar>ul>li {
+            display: block;
+            text-align: center;
+        }
+
+        .navbar-link {
+            color: #E3B587;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: 600;
+            display: block;
+            padding: 1rem 1.5rem;
+            transition: 0.3s;
+            height: 100%;
+            width: 100%;
+        }
+
+        .navbar-link:hover {
+            background-color: #456672;
+            color: white;
+        }
+
+        /* END HEADER */
+
+        /* START WELCOME */
+        #welcome-section {
+            background-color: #456672;
+            height: 100vh;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #welcome-section>h1 {
+            font-size: 3.5rem;
+            color: white;
+        }
+
+        #welcome-section>span {
+            font-size: 1.5rem;
+            color: #E3B587;
+        }
+
+        #welcome-section>p {
+            font-size: 2.5rem;
+            color: wheat;
+            font-style: italic;
+        }
+
+        /* END WELCOME */
+
+        /* START PROJECTS */
+        #projects {
+            background-color: #314357;
+            text-align: center;
+        }
+
+        #projects>h1 {
+            color: white;
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .projects-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .project-item {
+            display: block;
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .project-item:hover {
+            color: #E3B587;
+        }
+
+        .project-item img {
+            display: block;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-tile {
+            background-color: #392F2F;
+            padding: 1rem 0;
+            font-size: 1.5rem;
+        }
+
+        /* END PROJECTS */
+
+        /* START CONTACT */
+        .contact {
+            background-color: #456672;
+            text-align: center;
+        }
+
+        .contact>h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .contact-link {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1.8rem;
+            transition: 0.3s;
+        }
+
+        .contact-link:hover {
+            color: wheat;
+        }
+
+        /* END CONTACT */
+        footer {
+            background-color: #392F2F;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-size: 18px;
+        }
+
+        /* @media breakpoints */
+        @media screen and (max-width: 991.98px) {
+
+            /* header */
+            header>h1 {
+                font-size: 1.8rem;
+            }
+
+            .navbar-link {
+                font-size: 20px;
+                padding: 1rem;
+            }
+
+            /* welcome */
+            #welcome-section>h1 {
+                font-size: 3rem;
+            }
+
+            #welcome-section>span {
+                font-size: 1.2rem;
+            }
+
+            #welcome-section>p {
+                font-size: 2rem;
+            }
+
+            /* projects */
+            #projects>h1 {
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .projects-list {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .project-tile {
+                font-size: 1.2rem;
+            }
+
+            /* contact */
+            .contact>h1 {
+                font-size: 2.6rem;
+            }
+
+            .contact-link {
+                margin: 0 0.5rem;
+                font-size: 1.2rem;
+            }
+
+        }
+
+        @media (max-width: 575.98px) {
+
+            /* header */
+            header>h1 {
+                display: none;
+            }
+
+            /* welcome */
+            #welcome-section>h1 {
+                font-size: 2rem;
+            }
+
+            #welcome-section>p {
+                font-size: 1.8rem;
+            }
+
+            /* projects */
+            #projects>h1 {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+
+            /* contact */
+            .contact>h1 {
+                font-size: 2rem;
+            }
+
+            .contact-link {
+                margin: 0.5rem;
+                display: block;
+            }
+
+        }
+
+        @media (max-width: 479.98px) {
+
+            /* projects */
+            .projects-list {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .project-item img {
+                height: 150px;
+            }
+
+            .project-tile {
+                padding: 0.8rem 0;
+                font-size: 1rem;
+            }
+
+            /* contact */
+            .contact>h1 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 319.98px) {
+
+            /* header */
+            header {
+                padding: 0;
+            }
+
+            .navbar-link {
+                font-size: 18px;
+            }
+
+            /* welcome */
+            #welcome-section>h1 {
+                font-size: 1.8rem;
+            }
+
+            #welcome-section>span {
+                font-size: 1rem;
+            }
+
+            #welcome-section>p {
+                font-size: 1.5rem;
+            }
+
+            /* projects */
+            #projects>h1 {
+                font-size: 1.2rem;
+            }
+            /* contact */
+            .contact-link {
+                font-size: 1rem;
+            }
+            /* footer */
+            footer{
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>MY PORTFOLIO</h1>
+        <div id="navbar">
+            <ul>
+                <li><a href="#" class="navbar-link">About</a></li>
+                <li><a href="#projects" class="navbar-link">Work</a></li>
+                <li><a href="#" class="navbar-link">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <section id="welcome-section">
+        <h1>Hey I am Quang</h1>
+        <span>You can call me Raymond</span>
+        <p>I'm a web developer</p>
+    </section>
+    <section id="projects">
+        <h1>These are some of my projects</h1>
+        <div class="projects-list">
+            <a href="https://codepen.io/danghaiquang/full/bGoPOdx" class="project-item" target="_blank">
+                <img src="./img/tribute-page.PNG" alt="">
+                <p class="project-tile">Tribute Page</p>
+            </a>
+            <a href="https://codepen.io/danghaiquang/full/YzEaJRj" class="project-item" target="_blank">
+                <img src="./img/running-car.PNG" alt="">
+                <p class="project-tile">Running Car</p>
+            </a>
+            <a href="https://danghaiquang.github.io/Howl-s-moving-castle/" class="project-item" target="_blank">
+                <img src="./img/movie-page.PNG" alt="">
+                <p class="project-tile">Movie Page</p>
+            </a>
+            <a href="https://codepen.io/danghaiquang/full/BamaqZG" class="project-item" target="_blank">
+                <img src="./img/survey-form.PNG" alt="">
+                <p class="project-tile">Survey Form</p>
+            </a>
+            <a href="https://codepen.io/danghaiquang/full/rNYOqGR" class="project-item" target="_blank">
+                <img src="./img/landing-page.PNG" alt="">
+                <p class="project-tile">Product Landing Page</p>
+            </a>
+            <a href="https://codepen.io/danghaiquang/full/rNYOqGR" class="project-item" target="_blank">
+                <img src="./img/documentation-webpage.PNG" alt="">
+                <p class="project-tile">Technical Documentation</p>
+            </a>
+        </div>
+    </section>
+    <section class="contact">
+        <h1>Let's work together...</h1>
+        <a class="contact-link" href="https://www.freecodecamp.org/haiquang_dang" target="_blank"><i
+                class="fab fa-free-code-camp"></i> freeCodeCamp</a>
+        <a class="contact-link" href="https://github.com/HaiQuangDang" id="profile-link" target="_blank"><i
+                class="fab fa-github"></i> GitHub</a>
+        <a class="contact-link" href="https://twitter.com/haiquang_dang" target="_blank"><i class="fab fa-twitter"></i>
+            Twitter</a>
+        <a class="contact-link" href="mailto:danghaiquang12@gmail.com"><i class="fas fa-at"></i> Gmail</a>
+    </section>
+    <footer>
+        © Dang Hai Quang 2022
+    </footer>
+</body>
+
+</html>
