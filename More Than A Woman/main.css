@@ -1,0 +1,478 @@
+:root {
+    --main-height: 100vh;
+    --car-width: 600px;
+    --car_top-border: 80px;
+    --car_glass-border: 60px;
+    --car_bottom-height: 100px;
+    --wheel-padding: 18px;
+    --wheel-border: 30px;
+    --house-width: 250px;
+    --hotel-width: 400px;
+    --moon-size: 300px;
+    --theatre-width: 400px;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    position: relative;
+    height: var(--main-height);
+    overflow: hidden;
+    background-color: #23383f;
+}
+/* road */
+.road {
+    height: 20%;
+    width: 100%;
+    background-color: #252525;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.road__line {
+    height: 15%;
+    width: 12%;
+    background-color: #b67b33;
+    display: inline-block;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+}
+.road__line1 {
+    animation: moving 8s linear infinite;
+}
+
+.road__line2 {
+    animation: moving 8s linear 2s infinite;
+}
+
+.road__line3 {
+    animation: moving 8s linear 4s infinite;
+}
+
+.road__line4 {
+    animation: moving 8s linear 6s infinite;
+}
+/* car */
+.car {
+    position: absolute;
+    width: var(--car-width);
+    z-index: 99;
+    bottom: 16%;
+    left: 14%;
+}
+
+.car_top {
+    width: 40%;
+    border-left: var(--car_top-border) solid transparent;
+    border-right: var(--car_top-border) solid transparent;
+    border-bottom: var(--car_top-border) solid #beada5;
+    transform: translateX(50px);
+}
+
+.car_glass {
+    width: 80%;
+    border-left: var(--car_glass-border) solid transparent;
+    border-right: var(--car_glass-border) solid transparent;
+    border-bottom: var(--car_glass-border) solid #121012;
+    position: absolute;
+    top: 8px;
+    left: -15%;
+}
+
+.car_glass-seperate {
+    height: var(--car_glass-border);
+    width: 6px;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 8px;
+}
+
+.car_bottom {
+    width: 100%;
+    height: var(--car_bottom-height);
+    background-color: #943137;
+    border-radius: 10px 20px 25% 30%;
+}
+.wheel{
+    padding: var(--wheel-padding);
+    border: var(--wheel-border) solid;
+    background-color: #c8c3bf;
+    border-top-color: black;
+    border-bottom-color: black;
+    border-left-color: #fd6837;
+    border-right-color: #fd6837;
+    top: 70%;
+}
+.left-wheel {
+    left: 12%;
+    border-radius: 50%;
+    position: absolute;
+    animation: wheel 2s linear infinite;
+}
+
+.right-wheel {
+    right: 12%;
+    border-radius: 50%;
+    position: absolute;
+    animation: wheel 2s linear infinite;
+}
+
+/* house */
+.house {
+    height: 60%;
+    width: var(--house-width);
+    background-color: #b75c45;
+    position: absolute;
+    bottom: 20%;
+    left: 100%;
+    animation: moving 9s linear 6s infinite;
+    z-index: 9;
+}
+
+.doors{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 40%;
+    width: 50%;
+}
+
+.house-door{
+    width: 50%;
+    background-color: #a8658f;
+    border-top: 10px solid #7f3865;
+}
+
+.house-left-door {
+    border-right: 3px solid #333;
+    border-left: 10px solid #7f3865;
+    
+}
+
+.house-right-door {
+    border-right: 10px solid #7f3865;
+}
+
+.window{
+    height: 30%;
+    width: 80%;
+    border: 5px solid #7f3865;
+    background-color: #f6ea9c;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* hotel */
+.hotel {
+    height: 75%;
+    width: var(--hotel-width);
+    background-color: #cf4954;
+    position: absolute;
+    bottom: 20%;
+    left: 100%;
+    animation: moving 9s linear 3s infinite;
+    z-index: 9;
+}
+
+.hotel-door {
+    width: 50%;
+    background-color: #8f3747;
+    border-top: 10px solid #db867e;
+}
+
+.hotel-left-door{
+    border-right: 3px solid #333;
+    border-left: 10px solid #db867e;
+}
+
+.hotel-right-door{
+    border-right: 10px solid #db867e;
+}
+
+.rooms{
+    background-color: #d38570;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 10px solid #d38570;
+    width: 75%;
+    height: 45%;
+}
+
+.rooms>div {
+    height: 100%;
+    width: 100%;
+    background-color: #ffbb11;
+}
+/* moon */
+.moon {
+    height: var( --moon-size);
+    width: var( --moon-size);
+    background-color: #F4F6F0;
+    border-radius: 50%;
+    position: absolute;
+    left: 56%;
+    z-index: 2;
+}
+
+/* theatre*/
+.theatre {
+    position: absolute;
+    bottom: 20%;
+    z-index: 9;
+    height: 40%;
+    width: var(--theatre-width);
+    left: 100%;
+    animation: moving 9s linear infinite;
+}
+
+.banner {
+    position: absolute;
+    z-index: 9;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.banner-top {
+    height: 40%;
+    width: 100%;
+    background-color: #ef6363;
+    border-left: 8px solid #ffbba3;
+    border-radius: 0 50% 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+p{
+    font-family: 'Sacramento', cursive;
+    font-size: 36px;
+    font-weight: 900;
+    color: white;
+    animation: twinkle 1s ease-out infinite;
+   
+}
+
+.banner-bottom {
+    height: 60%;
+    width: 100%;
+    background-color: #2e2134;
+    border-left: 8px solid #ffbba3;
+    border-radius: 0 50px 0 0;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-family: 'Black Ops One', cursive;
+    font-size: 50px;
+    color: #c08545;
+}
+.light1 {
+    width: 0px;
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-top: 400px solid rgba(255, 146, 82, 0.63);
+    animation: light 2s linear infinite;
+    z-index: 3;
+    position: absolute;
+    bottom: 10px;
+    left: 80px;
+}
+
+.light2 {
+    width: 0px;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-top: 500px solid rgba(255, 146, 82, 0.63);
+    animation: light 2s linear 1s infinite;
+    z-index: 3;
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+}
+
+@keyframes moving {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-200vw);
+    }
+}
+@keyframes wheel {
+    from {
+        transform: rotate(0)
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes light {
+        0%{
+            transform: rotate(0);
+        }
+        25%{
+            transform: rotate(40deg);
+        }
+         50%{
+            transform: rotate(0deg);
+        }
+         75%{
+            transform: rotate(-45deg);
+        }
+        100%{
+            transform: rotate(0);
+        }
+}
+@keyframes twinkle {
+    0% {
+        opacity: 0.4;
+    }
+    50%{
+        opacity: 1;
+        text-shadow: 2px 2px 2px #F0EE7A;
+    }
+    100% {
+        opacity: 0.6;
+    }
+}
+
+/* media breakpoints */
+@media (max-width: 1199.98px) {
+}
+@media (max-width: 991.98px) { 
+    :root {
+        --main-height: 500px;
+        --car-width: 500px;
+        --car_top-border: 74px;
+        --car_glass-border: 54px;
+        --car_bottom-height: 80px;
+        --wheel-padding: 15px;
+        --wheel-border: 28px;
+        --house-width: 230px;
+        --hotel-width: 340px;
+        --moon-size: 240px;
+        --theatre-width: 360px;
+
+    }
+    p{
+        font-size: 32px;
+    }
+    .light1 {
+        border-top-width: 350px;
+    }
+    
+    .light2 {
+        border-top-width: 450px;
+    }
+    
+}
+@media (max-width: 767.98px) { 
+    :root {
+        --main-height: 400px;
+        --car-width: 400px;
+        --car_top-border: 60px;
+        --car_glass-border: 46px;
+        --car_bottom-height: 76px;
+        --wheel-padding: 10px;
+        --wheel-border: 24px;
+        --house-width: 200px;
+        --hotel-width: 280px;
+        --moon-size: 200px;
+        --theatre-width: 300px;
+    }
+    p{
+        font-size: 28px;
+    }
+    .banner-bottom {
+        font-size: 46px;
+    }
+    .light1 {
+        border-left-width: 70px;
+        border-right-width: 70px ;
+        border-top-width: 300px;
+        bottom: 10px;
+        left: 50px;
+    }
+    
+    .light2 {
+        border-left-width: 80px;
+        border-right-width: 80px;
+        border-top-width: 400px;
+        bottom: 0;
+        left: 60px;
+    }
+  
+}
+@media (max-width: 575.98px) { 
+    :root {
+        --main-height: 360px;
+        --car-width: 300px;
+        --car_top-border: 40px;
+        --car_glass-border: 30px;
+        --car_bottom-height: 55px;
+        --wheel-padding: 10px;
+        --wheel-border: 18px;
+    }
+    .car_top {
+        transform: translateX(30px);
+    }
+    
+}
+@media (max-width: 319.98px) { 
+    :root {
+        --main-height: 300px;
+        --car-width: 240px;
+        --car_top-border: 36px;
+        --car_glass-border: 24px;
+        --car_bottom-height: 45px;
+        --wheel-padding: 8px;
+        --wheel-border: 14px;
+        --house-width: 160px;
+        --hotel-width: 200px;
+        --moon-size: 180px;
+        --theatre-width: 240px;
+    }
+    p{
+        font-size: 20px;
+    }
+    .banner-bottom {
+        font-size: 36px;
+    }
+    .light1 {
+        border-left-width: 60px;
+        border-right-width: 60px ;
+        border-top-width: 180px;
+        bottom: 10px;
+        left: 40px;
+    }
+    
+    .light2 {
+        border-left-width: 70px;
+        border-right-width: 70px;
+        border-top-width: 250px;
+        bottom: 0;
+        left: 50px;
+    }
+}
+
+
+
+
+
